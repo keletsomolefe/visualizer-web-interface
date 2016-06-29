@@ -11,7 +11,7 @@ module.exports = function (config) {
     ],
 
     preprocessors: {
-      './config/karma-test-shim.js': ['webpack', 'sourcemap', 'coverage']
+      './config/karma-test-shim.js': ['coverage','webpack', 'sourcemap']
     },
 
     webpack: webpackConfig,
@@ -26,11 +26,11 @@ module.exports = function (config) {
     
     coverageReporter: {
         dir : 'coverage/',
-	reporters: [
-        {type: 'lcovonly'},
+	reporters: [        
 	{ type: 'json'},
         {type: 'html'},
-	{ type: 'text-summary' }        
+	{ type: 'text-summary' },
+	{type: 'lcovonly', subdir: '.'}        
       ]
 	
     },
