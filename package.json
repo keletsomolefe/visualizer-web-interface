@@ -4,7 +4,7 @@
   "description": "AngularJS Web Interface",
   "scripts": {
     "start": "webpack-dev-server --inline --progress --port 8080",
-    "test": "karma test",
+    "test": "karma start",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
     "postinstall": "typings install"
   },
