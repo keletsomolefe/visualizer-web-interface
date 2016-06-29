@@ -34,6 +34,17 @@ module.exports = {
         test: /\.css$/,
         loader: 'null'
       }
+    ],
+    postLoaders: [
+      {
+        test: /\.(js|ts)$/, loader: 'istanbul-instrumenter-loader',
+        include: helpers.root('src'),
+        exclude: [
+          /\.(e2e|spec)\.ts$/,
+          /node_modules/
+        ]
+      }
     ]
+
   }
 }
