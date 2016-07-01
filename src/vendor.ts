@@ -8,3 +8,6 @@ import '@angular/router-deprecated';
 
 // RxJS
 import 'rxjs';
+
+//Materialize
+import "angular2-materialize";
